@@ -1,0 +1,262 @@
+/* Réinitialisation des marges, paddings et boîtes de modèle */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    --main-color: #333; /* Définition de la couleur principale */
+}
+
+/* Styles pour la page de chargement */
+#loading-page {
+    position: absolute;
+    background-color: #222;
+    width: 100dvw; /* 100% de la largeur de la fenêtre */
+    height: 100dvh; /* 100% de la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+/* style pour le texte de chargement */
+.animation h2 {
+    color: #fff;
+    overflow: hidden;
+    border-right: .15em solid var(--main-color);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .4em;
+    animation:
+        ecriture 3.5s steps(30, end),
+        clignotement .8s step-end infinite;
+}
+
+/* Animation pour l'écriture du texte */
+@keyframes ecriture {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* Animation pour le clignotement du curseur */
+@keyframes clignotement {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: white
+    }
+}
+
+/* Styles pour le conteneur des boutons de la page de chargement */
+#loading-page div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles pour les boutons de la page de chargement */
+#loading-page button {
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 0.1s ease;
+    border-width: 0;
+    margin: 0 2rem;
+}
+
+#loading-page button:hover {
+    transform: translateY(-4px);
+    box-shadow: 1px 9px 0 0 #fff;
+}
+
+/* Styles généraux pour le corps de la page */
+body {
+    text-align: center;
+    background-color: #222;
+}
+
+/* Styles pour la section principale de la page */
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100dvh;
+    padding: 5rem;
+    gap: 2rem;
+}
+
+/* Styles pour la section de validation */
+.valider {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: .5rem solid var(--main-color);
+}
+
+.valider #button {
+    background-color: #fff;
+    color: black;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    transition: ease-in-out all .2s;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.valider #button:hover {
+    transform: scale(1.2);
+}
+
+/* Styles pour la section de séléction*/
+.selector {
+    background-color: transparent;
+    border: .5rem solid var(--main-color);
+    width: 100%;
+    padding: 2rem;
+    overflow-y: scroll;
+}
+
+.selector h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.selector button {
+    background-color: #fff;
+    color: black;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    transition: ease-in-out all .2s;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.selector button:hover {
+    background-color: #d3d3d3;
+}
+
+/* Styles pour le conteneur des résultats */
+#results {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 2rem 0;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Styles pour le terrain de jeu */
+#terrain {
+    background-image: url(src/terrain.jpg);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-color: transparent;
+    border: .5rem solid var(--main-color);
+    width: 100%;
+    display: grid;
+    padding: 2rem;
+    gap: 5rem;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+}
+
+/* Styles pour les lignes du terrain */
+.line {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Styles pour les images (joueurs et emplacements) */
+img {
+    display: block;
+    transform-origin: center;
+    width: 60%;
+    transition: all .2s ease-in-out;
+    transform-origin: center;
+}
+
+/* Styles pour les images (sur le terrain uniquement) */
+.slot,
+.selected {
+    width: 8rem;
+}
+
+/* Styles pour les images (sur la section selection uniquement) */
+.player {
+    width: 10rem;
+}
+
+/* Effet de zoom sur les cartes de joueur au survol */
+.player:hover {
+    transform: scale(1.1);
+}
+
+/* Media queries pour les tailles d'écran inférieures */
+@media (width <=1500px) {
+    main {
+        flex-direction: column;
+        width: 100vw;
+        height: fit-content;
+        padding: 2rem;
+    }
+}
+
+@media (width <=700px) {
+    #results {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 2rem 0;
+        align-items: center;
+        justify-items: center;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #222;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

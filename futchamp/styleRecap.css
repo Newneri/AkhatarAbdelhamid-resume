@@ -1,0 +1,72 @@
+body{
+    padding: 4rem;
+    height: calc(100dvh - 4rem*4);
+    margin: 0;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#terrain2 {
+    background-image: url(src/terrain.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: padding-box;
+    background-color: #333;
+    width: 50%;
+    margin: auto;
+    border-radius: 5rem;
+    display: grid;
+    gap: 5rem;
+    align-items: center;
+    justify-items: center;
+}
+
+h2 {
+    color: white;
+    font-family: monospace;
+    font-size: 2rem;
+    text-decoration: overline;
+}
+
+.line {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+img {
+    display: block;
+    transform-origin: center;
+    transition: all .2s ease-in-out;
+    transform-origin: center;
+    width: 6rem;
+}
+
+.button {
+    background-color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 0.1s ease;
+    border-width: 0;
+    margin: 0 2rem;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 1px 9px 0 0 #fff;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+}

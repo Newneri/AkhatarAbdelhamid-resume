@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fut Champ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Page de charge permettant de séléctionner une formation -->
+    <div id="loading-page">
+        <div class="animation">
+            <h2>Séléctionnez votre formation</h2>
+        </div>
+        <div>
+            <button onclick="start([3,3,4,1])"> 4 3 3 </button>
+            <button onclick="start([2,4,4,1])"> 4 4 2 </button>
+            <button onclick="start([1,5,4,1])"> 4 5 1 </button>
+            <button onclick="start([1,4,5,1])"> 5 4 1 </button>
+            <button onclick="start([3,4,3,1])"> 3 4 3 </button>
+        </div>
+    </div>
+    <!-- Section principale prenant la totalité de l'écran -->
+    <main>
+        <!-- Section Selection où les joueurs disponibles sont affichés -->
+        <div class="selector">
+            <h1>FUT CHAMP</h1>
+            <button onclick="filter(0)">Male</button>
+            <button onclick="filter(1)">Female</button>
+            <section id="results">
+
+            </section>
+        </div>
+        <!-- Section Validation où se trouve le formulaire caché permettant de valider la composition-->
+        <div class="valider">
+            <form id="form" action="recapitulatif.html" method="GET" onsubmit="return valider()">
+                <input type="submit" id="button" value="Valider">
+            </form>
+        </div>
+        <!-- Section terrain où est affiché la composition -->
+        <div id="terrain">
+        </div>
+    </main>
+    <!--Script javaScript -->
+    <script src="main.js"></script>
+</body>
+
+</html>
