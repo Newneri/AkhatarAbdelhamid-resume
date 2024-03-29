@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <h2>Ma Pizza</h2>
+        <form action="commander.html" method="GET" id="monForm" name="monForm">
+            <div class="form-example">
+                <label for="name">Pate</label>
+                <select name="pate" id="pate" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>
+                        Napolitaine
+                    </option>
+                    <option>
+                        Romaine
+                    </option>
+                    <option>
+                        Foccacia
+                    </option>
+                    <option>
+                        New-York
+                    </option>
+                    <option>
+                        Silicienne
+                    </option>
+                    <option>
+                        Chicago
+                    </option>
+                </select>
+            </div>
+            <div class="form-example">
+                <label for="name">Base</label>
+                <select name="base" id="base" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="Tomate">
+                        Tomate
+                    </option>
+                    <option value="Creme">
+                        Crème
+                    </option>
+                </select>
+            </div>
+            <div class="form-example">
+                <label for="ingredient1">ingrédient 1 :</label>
+                <select name="ingredient1" id="ingredient1" size="6" required>
+                    <option>
+                        Jambon
+                    </option>
+                    <option>
+                        Poulet
+                    </option>
+                    <option>
+                        Gruyere
+                    </option>
+                    <option>
+                        Gorgonzola
+                    </option>
+                    <option>
+                        Oeuf
+                    </option>
+                    <option>
+                        Parmesan
+                    </option>
+                </select>
+            </div>
+            <div class="form-example">
+                <label for="ingredient2">ingrédient 2 :</label>
+                <select name="ingredient2" id="ingredient2" size="6">
+                    <option>
+                        Jambon
+                    </option>
+                    <option>
+                        Poulet
+                    </option>
+                    <option>
+                        Gruyere
+                    </option>
+                    <option>
+                        Gorgonzola
+                    </option>
+                    <option>
+                        Oeuf
+                    </option>
+                    <option>
+                        Parmesan
+                    </option>
+                </select>
+            </div>
+            <div class="form-example">
+                <label for="ingredient3">ingrédient 3 :</label>
+                <select name="ingredient3" id="ingredient3" size="6">
+                    <option>
+                        Jambon
+                    </option>
+                    <option>
+                        Poulet
+                    </option>
+                    <option>
+                        Gruyere
+                    </option>
+                    <option>
+                        Gorgonzola
+                    </option>
+                    <option>
+                        Oeuf
+                    </option>
+                    <option>
+                        Parmesan
+                    </option>
+                </select>
+            </div>
+            <div class="form-example">
+                <label for="fidelite"> Avez vous la fidélité?</label>
+                <div>
+                    <input type="radio" id="fidelite" name="fidelite" value="Oui"><label for="fidelite">Oui</label>
+                    <input type="radio" id="fidelite" name="fidelite" value="Non"><label for="fidelite">Non</label>
+                </div>
+            </div>
+            <div class="form-example">
+                <input type="submit" value="submit" id="button"/>
+            </div>
+        </form>
+    </div>
+    <a class="lien" href="../index.html">Revenir</a>
+</body>
+
+</html>

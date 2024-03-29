@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,500;6..12,700;6..12,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'nunito', sans-serif;
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #191a27;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 3px 2px #ffffff17;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+}
+
+#input {
+    background-color: #fff;
+    min-height: 5rem;
+    border-radius: 1rem;
+    text-align: right;
+    padding: 0 .5rem;
+}
+
+main {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    height: 500px;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #191a27;
+    box-shadow: 6px 6px #ffffff17;
+}
+
+main input {
+    min-height: 5rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 2rem;
+    padding: 0 .5rem;
+}
+
+
+.grid-top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.btn, .btn-right, .btn-top, .btn-bot {
+    border-radius: 5rem;
+    padding: .5rem;
+}
+
+.btn {
+    background-color: #333333;
+    color: #fff;
+}
+
+.btn-bot {
+    background-color: #333333;
+    color: #fff;
+}
+
+.btn-top {
+    background-color: #a0a0a0;
+    color: #191a27;
+}
+
+.btn-right {
+    background-color: #ff9100;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+}

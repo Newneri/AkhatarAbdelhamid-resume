@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: 'nunito', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 40%;
+    background-color: #ccc5b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.form-example {
+    padding: .5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form-example input{
+    width: 60%;
+}
+
+#button {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #fffcf2;
+    border: none;
+    padding: .5rem;
+}
+
+#message {
+    width: 60%;
+    min-height: 3rem;
+    resize: vertical;
+}
+
+#pate, #base {
+    width: 60%;
+    background-color: #fff;
+    border: none;
+    padding: .2rem;
+}
+
+.recapCommande {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc5b9;
+    padding: 2rem;
+}
+
+.realiserCommande {
+    width: 100%;
+    background-color: #ccc5b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tabRecap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.tabRecap h3 {
+    padding: .5rem 0;
+}
+
+#recapCommande {
+    text-align: right;
+}
+
+.lien {
+    text-decoration: none;
+    color: #000;
+    font-family: "nunito", sans-serif;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2rem;
+    padding: .5rem 1rem;
+    border: 1px solid #000;
+    transition: .5s ease-out all;
+}
+
+.lien:hover {
+    transform: scale(1.05);
+}

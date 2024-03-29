@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Morpion - AkhtatarAbd</title>
+</head>
+
+<body>
+    <header>
+        <h1>Morpion</h1>
+        <button id="silent">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                    d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+            </svg>
+            </div>
+    </header>
+    <p>C'est au tour du <span id="joueur">Joueur 1</span></p>
+    <div id="grid">
+        <div id="c1" class="case"></div>
+        <div id="c2" class="case"></div>
+        <div id="c3" class="case"></div>
+        <div id="c4" class="case"></div>
+        <div id="c5" class="case"></div>
+        <div id="c6" class="case"></div>
+        <div id="c7" class="case"></div>
+        <div id="c8" class="case"></div>
+        <div id="c9" class="case"></div>
+    </div>
+    <div class="tableau">
+        <p>Score Joueur 1 : <span id="score1">0</span></p>
+        <p>Score Joueur 2 : <span id="score2">0</span></p>
+        <p>Matchs nuls : <span id="scoreNul">0</span></p>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
