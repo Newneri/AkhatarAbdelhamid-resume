@@ -1,0 +1,41 @@
+body {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+form {
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    box-shadow: 6px 8px 10px rgba(121, 121, 121, 0.438);
+    gap: 1rem;
+}
+
+.form-element {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-element input {
+    width: 50%;
+}
+
+#btn {
+    background-color: #fff;
+    border: 1px solid black;
+    font-family: inherit;
+    padding: .2rem;
+}
+
+#btn:hover {
+    box-shadow: 4px 6px 8px rgba(121, 121, 121, 0.438);
+}
