@@ -9,7 +9,7 @@
 body{
     display: flex;
     min-height: 100dvh;
-    background-color: #252422;
+    background-color: #222;
     align-items: center;
 }
 
@@ -21,7 +21,7 @@ body{
 
 .work h1{
     font-size: 3rem;
-    color: #fffcf2;
+    color: #fff;
     margin-bottom: 2rem;
 }
 
@@ -32,8 +32,8 @@ body{
 }
 
 .grid-element {
-    background-color: #403d39;
-    color: #fffcf2;
+    background-color: #333;
+    color: #fff;
     padding: 2rem;
     border-radius: 2rem;
 }
