@@ -7,19 +7,17 @@
     <title>Log In</title>
 </head>
 <body>
-    <?php   
-        echo "<form>
-            <div class='form-element'> 
-                <label>Log In</label>
-                <input type='text'>
-            </div>
-            <div class='form-element'> 
-                <label>Password</label>
-                <input type='password'>
-            </div>
-            <input type='submit' value='Connect' id='btn'>
-        </form>";
-    ?> 
+    <form action="verifierConnexion.php" method="POST">
+        <div class='form-element'> 
+            <label>Log In</label>
+            <input type='text' name="login">
+        </div>
+        <div class='form-element'> 
+            <label>Password</label>
+            <input type='password' name="password">
+        </div>
+        <input type='submit' value='Connect' id='btn'>
+    </form>
     
 </body>
 </html>
