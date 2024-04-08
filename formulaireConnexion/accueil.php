@@ -9,8 +9,8 @@
 <body>
     <?php
         echo "Bonjour <br>";
-        echo $_GET['login'];
         echo "Voici ta page d'accueil !";
+        echo "<a href='connexion.php'> Revenir </a>";
     ?>
 </body>
 </html>
