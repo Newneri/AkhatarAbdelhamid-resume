@@ -1,0 +1,151 @@
+* {
+    font-family: monospace;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    --header-main: rgb(255, 252, 207);
+    --header-main-dark: rgb(243, 241, 201);
+    --main-text: rgb(51, 32, 17);
+    --main-text-highlight: rgb(231, 145, 69);
+    --secondary-dark: rgb(34, 27, 22);
+    --secondary-light: rgb(209, 207, 193);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+
+    background: linear-gradient(135deg,
+            var(--header-main) 25%,
+            var(--header-main-dark) 25%,
+            var(--header-main-dark) 50%,
+            var(--header-main) 50%,
+            var(--header-main) 75%,
+            var(--header-main-dark) 75%,
+            var(--header-main-dark));
+    background-size: 40px 40px;
+
+    /* Animation */
+    animation: move 2s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 1rem 3rem;
+    color: var(--main-text);
+}
+
+header h2 {
+    color: var(--main-text-highlight);
+}
+
+.navigation-card {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: transparent;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+circle,
+path,
+line,
+mask,
+g,
+rect,
+svg {
+    stroke: var(--main-text);
+}
+
+
+.tab:hover {
+    background-color: var(--header-main-dark);
+}
+
+
+button {
+    font-size: 2rem;
+    background-color: transparent;
+    color: var(--main-text);
+    padding: 1rem;
+    border: 2px solid var(--main-text);
+    border-radius: 2rem;
+    transition: all 0.3s;
+    margin: 6rem 2rem;
+}
+
+button:hover {
+    border-radius: 2rem;
+    background-color: var(--header-main-dark);
+    cursor: pointer;
+}
+
+.admin{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    color: var(--main-text);
+    padding: 1rem;
+    border: 2px solid var(--main-text);
+    border-radius: 2rem;
+    transition: all 0.3s;
+    margin: 2rem;
+}
+
+.accueil {
+    width: 80%;
+    margin: auto;
+    min-height: 80%;
+    padding: 20rem 5rem;
+    text-align: center;
+}
+
+.accueil h1 {
+    font-size: 4rem;
+    color: var(--main-text);
+}
+
+h1 span {
+    font-size: 5rem;
+    color: var(--main-text-highlight);
+}
+
+p {
+    font-size: 2rem;
+    color: var(--secondary-text);
+}
