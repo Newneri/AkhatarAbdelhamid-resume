@@ -8,9 +8,22 @@
 </head>
 <body>
     <?php
+        session_start();
+        $_SESSION["usertype"] = "";
+        $_SESSION["username"] = "";
+        $_SESSION["pagename"] = "index";
+        $_SESSION["erreur"] = "";
         include 'components/header.php';
-        echo "<a href='connexionAdmin.php' class='admin'>Admin</a>";
-        include 'components/home.php'
     ?>
+    <div class="accueil">
+    <h1>
+        Welcome to <span>CyGym</span> <br> From the smartest to the strongest.
+    </h1>
+    <p>Building strong brains and strong bodys since 1983 <br> </p>
+    <form action="requestsForms/resultatsRecherche.php" method="POST">
+            <input type="text" class="search__input" placeholder="Search for a class" name="search">
+            <input type="submit" class="search__button" value='Search'>
+        </form>
+</div>
 </body>
 </html>

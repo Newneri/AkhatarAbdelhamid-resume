@@ -1,26 +1,35 @@
-.card {
+.card, .card-coaches{
     width: 500px;
     margin: auto;
-    margin-top: 20rem;
     padding: 3rem;
     text-align: center;
     background-color: var(--header-main);
     border: 4px solid var(--header-main-dark);
     border-radius: 2rem;
+    margin-bottom: 4rem;
+}
+
+
+.card-coaches{
+    width: min-content;
+    padding: 2rem;
 }
 
 .card h2 {
     color: var(--main-text);
     font-weight: 500;
     font-size: 2rem;
+    margin-top: 0;
 }
+
+
 
 .form-element {
     margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     background-color: var(--header-main-dark);
     padding: 1rem 2rem;
     border-radius: 2rem;
@@ -32,7 +41,7 @@
     fill: var(--main-text);
 }
 
-.form-element input {
+.form-element input, select {
     background: none;
     border: none;
     outline: none;
@@ -40,17 +49,42 @@
     color: var(--main-text);
 }
 
+
+option{
+    background-color: var(--header-main);
+}
+
+option:checked,
+option:hover,
+option:focus {
+    background-color: var(--header-main-dark);
+}
+
 .loginButton{
     margin-top: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: var(--header-main-dark);
     border: 1px solid transparent;
     border-radius: 2rem;
-    padding: 1rem 2rem;
+    padding: .5rem 2rem;
     transition: all .2s ease-in-out;
 }
 
 .loginButton:hover {
     border: 1px solid var(--main-text);
     background-color: var(--main-text-highlight);
+}
+
+/*Style pour la table des coaches*/
+
+td {
+    font-size: 1.5rem;
+    color: var(--main-text);
+    padding: 1rem 1rem;
+    min-width: max-content;
+    text-align: start;
+}
+
+tr:first-of-type td{
+    color: var(--main-text-highlight);
 }
