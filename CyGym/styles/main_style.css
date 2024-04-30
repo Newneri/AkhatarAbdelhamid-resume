@@ -87,7 +87,8 @@ header h2 {
 }
 
 .log,
-.btn-revenir {
+.btn-revenir,
+.btn-inscrire {
     font-size: 1.2rem;
     background-color: var(--header-main);
     color: var(--main-text);
@@ -98,13 +99,19 @@ header h2 {
 }
 
 .log:hover,
-.btn-revenir:hover {
+.btn-revenir:hover,
+.btn-inscrire:hover {
     background-color: var(--main-text-highlight);
     border: 2px solid transparent;
 }
 
 .btn-revenir {
     align-self: center;
+}
+
+.btn-inscrire{
+    background-color: white;
+    padding: .5rem 1rem;
 }
 
 /*Style pour l'affichage d'username*/

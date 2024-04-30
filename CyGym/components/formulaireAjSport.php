@@ -1,7 +1,8 @@
 <?php
 
 $noms = array();
-$file = fopen("/home/akhatarabd/info4/AkhatarAbdelhamid-resume/CyGym/donnees/profs.csv", "r") or die("unable to open file");
+define('ROOT_PATH', dirname(__DIR__) . '/');
+$file = fopen(ROOT_PATH . "donnees/profs.csv", "r") or die("unable to open file");
 
 $tmp = 0;
 while (($data = fgetcsv($file, 1000, ",")) !== false) {

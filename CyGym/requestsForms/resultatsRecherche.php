@@ -37,7 +37,7 @@
             foreach ($line as $cell) {
                 echo "<td>" . htmlspecialchars($cell) . "</td>";
             }
-            echo "<td> <button>Sign lesson</button> </td>";
+            echo "<td> <button class='btn-inscrire'>Sign lesson</button> </td>";
             echo "</tr>\n";
         }
         $tmp++;
