@@ -3,7 +3,6 @@
 * {
     font-family: "nunito", sans-serif;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
     --header-main: rgb(255, 252, 207);
@@ -79,6 +78,7 @@ header h2 {
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s;
+    margin: 0 1rem;
 }
 
 .tab:hover {
@@ -93,14 +93,15 @@ header h2 {
     background-color: var(--header-main);
     color: var(--main-text);
     padding: .5rem 1.5rem;
+    white-space: nowrap;
+    text-align: center;
     border: 2px solid var(--header-main-dark);
     border-radius: 2rem;
     transition: all 0.3s;
 }
 
 .log:hover,
-.btn-revenir:hover,
-.btn-inscrire:hover {
+.btn-revenir:hover {
     background-color: var(--main-text-highlight);
     border: 2px solid transparent;
 }
@@ -109,18 +110,23 @@ header h2 {
     align-self: center;
 }
 
-.btn-inscrire{
-    background-color: white;
-    padding: .5rem 1rem;
+.btn-inscrire {
+    color: var(--main-text-highlight);
+}
+
+.btn-inscrire:hover {
+    background-color: var(--header-main-dark);
+    border: 2px solid transparent;
 }
 
 /*Style pour l'affichage d'username*/
 
-h3{
+h3 {
     margin: 0;
     color: var(--main-text);
 }
-h3 span{
+
+h3 span {
     color: var(--main-text-highlight);
 }
 

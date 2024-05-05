@@ -35,9 +35,15 @@
         else if ($line[1] == $_POST["search"]) {
             echo "<tr>";
             foreach ($line as $cell) {
-                echo "<td>" . htmlspecialchars($cell) . "</td>";
+                echo "<td> <div>" . htmlspecialchars($cell) . "</div></td>";
             }
-            echo "<td> <button class='btn-inscrire'>Sign lesson</button> </td>";
+            echo "<td> 
+                <form method='GET' action='inscrireCours.php'>
+                    <input type='text' value='". $line[0] ."' name='coursId' hidden>
+                    <input type='text' value='". $line[1] ."' name='sport' hidden>
+                    <input type='submit' class='btn-inscrire' value='Sign lesson'>
+                </form> 
+            </td>";
             echo "</tr>\n";
         }
         $tmp++;

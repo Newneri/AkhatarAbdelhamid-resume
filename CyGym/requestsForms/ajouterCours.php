@@ -40,7 +40,7 @@
         while (($line = fgetcsv($f, 1000, ",")) !== false) {
             echo "<tr>";
             foreach ($line as $cell) {
-                echo "<td>" . htmlspecialchars($cell) . "</td>";
+                echo "<td><div>" . htmlspecialchars($cell) . "</div></td>";
             }
             echo "</tr>\n";
         }

@@ -4,7 +4,7 @@
     <?php
     session_start();
     define('ROOT_PATH', dirname(__DIR__) . '/');
-    if (isset($_SESSION['pagename']) && ($_SESSION['pagename'] == 'login-page' || $_SESSION['pagename'] == 'search-page')) {
+    if (isset($_SESSION['pagename']) && ($_SESSION['pagename'] == 'login-page' || $_SESSION['pagename'] == 'search-page' || $_SESSION['pagename'] == 'inscription-page')) {
         echo "<nav class='navigation-card'>
                 <a href='../index.php' class='tab'>
                     <svg
@@ -23,13 +23,13 @@
             </nav>";
     } else if (isset($_SESSION['usertype']) && $_SESSION['usertype'] != '') {
         echo "
-            <h3>Welcome <span>".$_SESSION["username"]."</span></h3>
+            <h3>Welcome <span>" . $_SESSION["username"] . "</span></h3>
             <nav class='navigation-card'>
                 <a href='../index.php' class='log'>Log Out</a>
             </nav>";
     } else {
         echo "<nav class='navigation-card'>
-                <a href='connexions/connexion.php' class='log'>Log In</a>
+                <a href='../connexions/connexion.php' class='log'>Log In</a>
             </nav>";
     }
     ?>
