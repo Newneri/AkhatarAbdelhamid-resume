@@ -43,7 +43,7 @@
     echo "\n</table>";
     echo "</div>";
     ?>
-    <a class='btn-revenir' href='../index.php'> Revenir </a>
+    <a class='mainBtn' href='../index.php'> Revenir </a>
 
 </body>
 

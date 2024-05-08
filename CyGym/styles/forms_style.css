@@ -64,21 +64,6 @@ option:focus {
     background-color: var(--header-main-dark);
 }
 
-.loginButton {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    background-color: var(--header-main-dark);
-    border: 1px solid transparent;
-    border-radius: 2rem;
-    padding: .5rem 2rem;
-    transition: all .2s ease-in-out;
-}
-
-.loginButton:hover {
-    border: 1px solid var(--main-text);
-    background-color: var(--main-text-highlight);
-}
-
 /*Style pour la table*/
 
 td {

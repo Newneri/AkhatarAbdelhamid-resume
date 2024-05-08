@@ -12,7 +12,7 @@ if ($_POST["username"] == "admin" && $_POST["password"] == "admin") {
     $tmp = 0;
     while (($data = fgetcsv($file, 1000, ",")) !== false) {
         if ($tmp > 0) {
-            if ($data[3] == $_POST["username"] && $data[4] == $_POST["password"]) {
+            if ($data[3] == $_POST["username"] && $data[4] == md5($_POST["password"])) {
                 $_SESSION["username"] = $_POST["username"];
                 $_SESSION["usertype"] = "coach";
                 $_SESSION["erreur"] = "";

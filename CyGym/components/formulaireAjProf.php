@@ -11,6 +11,6 @@
             <label for="date">Hiring Date</label>
             <input type="date" name="date-embauche" required>
         </div>
-        <input type="submit" value="Add" class="loginButton" name="submit">
+        <input type="submit" value="Add" class="mainBtn" name="submit">
     </form>
 </div>

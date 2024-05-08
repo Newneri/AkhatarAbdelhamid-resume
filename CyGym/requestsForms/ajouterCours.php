@@ -47,7 +47,7 @@
         fclose($f);
         echo "\n</table>";
         echo "</div>";
-        echo "<a class='btn-revenir' href='../gestionProf.php'> Revenir </a>";
+        echo "<a class='mainBtn' href='../gestionProf.php'> Revenir </a>";
     }
     ?>
 

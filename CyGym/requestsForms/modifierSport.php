@@ -72,7 +72,7 @@
         fclose($f);
         echo "\n</table>";
         echo "</div>";
-        echo "<a class='btn-revenir' href='../gestionAdmin.php'> Revenir </a>";
+        echo "<a class='mainBtn' href='../gestionAdmin.php'> Revenir </a>";
     }
     ?>
 

@@ -20,7 +20,7 @@ fclose($file);
     <h2>Modify Sports</h2>
     <form action='../requestsForms/modifierSport.php' method='POST' autocomplete='off'>
         <div class='form-element'>
-            <select name='pseudo' id=''>
+            <select name='pseudo' required>
                 <?php
                 foreach ($noms as $nom) {
                     echo "<option value='" . $nom . "'>" . $nom . "</option>";
@@ -34,6 +34,6 @@ fclose($file);
         <div class='form-element'>
             <input type='text' placeholder='Sport 2' name='sport2' required>
         </div>
-        <input type='submit' value='Modify' class='loginButton' name='submit'>
+        <input type='submit' value='Modify' class='mainBtn' name='submit'>
     </form>
 </div>

@@ -25,11 +25,11 @@
         echo "
             <h3>Welcome <span>" . $_SESSION["username"] . "</span></h3>
             <nav class='navigation-card'>
-                <a href='../index.php' class='log'>Log Out</a>
+                <a href='../index.php' class='mainBtn'>Log Out</a>
             </nav>";
     } else {
         echo "<nav class='navigation-card'>
-                <a href='../connexions/connexion.php' class='log'>Log In</a>
+                <a href='../connexions/connexion.php' class='mainBtn'>Log In</a>
             </nav>";
     }
     ?>

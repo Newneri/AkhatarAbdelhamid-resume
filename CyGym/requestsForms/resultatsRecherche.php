@@ -41,7 +41,7 @@
                 <form method='GET' action='inscrireCours.php'>
                     <input type='text' value='". $line[0] ."' name='coursId' hidden>
                     <input type='text' value='". $line[1] ."' name='sport' hidden>
-                    <input type='submit' class='btn-inscrire' value='Sign lesson'>
+                    <input type='submit' class='mainBtn inscrireBtn' value='Sign lesson'>
                 </form> 
             </td>";
             echo "</tr>\n";
@@ -52,7 +52,7 @@
     ?>
     </table>
     </div>
-    <a class='btn-revenir' href='../index.php'> Revenir </a>
+    <a class='mainBtn' href='../index.php'> Revenir </a>
 </body>
 
 </html>

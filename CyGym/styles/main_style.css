@@ -86,37 +86,36 @@ header h2 {
     border: 2px solid transparent;
 }
 
-.log,
-.btn-revenir,
-.btn-inscrire {
+.mainBtn {
     font-size: 1.2rem;
+    border: 1px solid transparent;
     background-color: var(--header-main);
+    border-radius: 2rem;
+    padding: .5rem 2rem;
+    text-decoration: none;
     color: var(--main-text);
-    padding: .5rem 1.5rem;
+    transition: all 0.3s;
     white-space: nowrap;
     text-align: center;
-    border: 2px solid var(--header-main-dark);
-    border-radius: 2rem;
-    transition: all 0.3s;
 }
 
-.log:hover,
-.btn-revenir:hover {
-    background-color: var(--main-text-highlight);
-    border: 2px solid transparent;
-}
-
-.btn-revenir {
+a.mainBtn {
     align-self: center;
+    background-color: var(--header-main);
 }
 
-.btn-inscrire {
-    color: var(--main-text-highlight);
-}
-
-.btn-inscrire:hover {
+input.mainBtn {
+    margin-top: 2rem;
     background-color: var(--header-main-dark);
-    border: 2px solid transparent;
+}
+
+input.inscrireBtn {
+    margin-top: 0;
+}
+
+.mainBtn:hover {
+    border: 1px solid var(--main-text);
+    background-color: var(--main-text-highlight);
 }
 
 /*Style pour l'affichage d'username*/
@@ -128,6 +127,12 @@ h3 {
 
 h3 span {
     color: var(--main-text-highlight);
+}
+
+
+.msg {
+    color: var(--main-text);
+    margin-bottom: 2rem;
 }
 
 /*Style pour l'accueil*/
@@ -217,3 +222,60 @@ p {
     width: 1.3em;
     fill: var(--secondary-dark);
 }
+
+
+/*Show Password Icon Style */
+
+/*------ Settings ------*/
+.container {
+    --size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--main-text);
+  }
+  
+  .container .eye {
+    position: absolute;
+    animation: keyframes-fill .5s;
+  }
+  
+  .container .eye-slash {
+    position: absolute;
+    animation: keyframes-fill .5s;
+    display: none;
+  }
+  
+  /* ------ On check event ------ */
+  .container input:checked ~ .eye {
+    display: none;
+  }
+  
+  .container input:checked ~ .eye-slash {
+    display: block;
+  }
+  
+  /* ------ Hide the default checkbox ------ */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* ------ Animation ------ */
+  @keyframes keyframes-fill {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  }

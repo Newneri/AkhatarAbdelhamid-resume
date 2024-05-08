@@ -19,45 +19,63 @@
         $password = base64_encode($password);
         $password = str_replace(["+", "/", "="], "", $password);
         $password = substr($password, 0, 8);
-        return md5($password);
+        return $password;
     }
     if (isset($_SESSION["usertype"]) && $_SESSION["usertype"] == "admin") {
-        $ligne = [$_POST["fname"], $_POST["lname"], $_POST["date-embauche"], $_POST["fname"][0] . $_POST["lname"], genPassword()];
-        $path = ROOT_PATH . "donnees/profs.csv";
-        $file = fopen($path, "a+");
-        $noms = array();
-        $tmp = 1;
+        if (isset($_POST["fname"])) {
 
-        while (($data = fgetcsv($file, 1000, ",")) !== FALSE) {
-            if ($data[3] == $ligne[3] && $data[0][0] == $ligne[0][0]) {
-                if ($tmp > 1) {
-                    $ligne[3] = substr($data[3], 0, -1) . strval($tmp);
-                } else {
-                    $ligne[3] = $data[3] . strval($tmp);
+            $password = genPassword();
+            $ligne = [$_POST["fname"], $_POST["lname"], $_POST["date-embauche"], $_POST["fname"][0] . $_POST["lname"], md5($password)];
+            $path = ROOT_PATH . "donnees/profs.csv";
+            $file = fopen($path, "a+");
+            $noms = array();
+            $tmp = 1;
+
+            while (($data = fgetcsv($file, 1000, ",")) !== FALSE) {
+                if ($data[3] == $ligne[3] && $data[0][0] == $ligne[0][0]) {
+                    if ($tmp > 1) {
+                        $ligne[3] = substr($data[3], 0, -1) . strval($tmp);
+                    } else {
+                        $ligne[3] = $data[3] . strval($tmp);
+                    }
+                    $tmp++;
+
                 }
-                $tmp++;
-                
             }
+            fputcsv($file, $ligne);
+            fclose($file);
         }
-        fputcsv($file, $ligne);
-        fclose($file);
 
         include '../components/header.php';
-
+        echo "<h3 class='msg' >Retenez bien le mot de passe affiché à coté du prof que vous venez de rajouter, vous ne le verez plus ! </h3>";
         echo "<div class='card card-coaches'> <h2>Coaches</h2>";
         echo "<table>\n\n";
+        $fileEndPos = filesize(($path));
         $fileRead = fopen($path, "r");
+
         while (($line = fgetcsv($fileRead)) !== false) {
+            $currentPos = ftell($fileRead);
             echo "<tr>";
-            foreach (array_slice($line, 0, -1) as $cell) {
-                echo "<td>" . htmlspecialchars($cell) . "</td>";
+            if ($currentPos >= $fileEndPos) {
+                for( $i = 0; $i < sizeof($line); $i++ ){
+                    if($i==4){
+                        echo "<td>" . $password . "</td>";
+                    } else{
+                        echo "<td>" . $line[$i] . "</td>";
+                    }
+                }
+            } else {
+                foreach (array_slice($line, 0, -1) as $cell) {
+                    echo "<td>" . $cell . "</td>";
+                }
             }
             echo "</tr>\n";
+            $i++;
         }
         fclose($fileRead);
         echo "\n</table>";
         echo "</div>";
-        echo "<a class='btn-revenir' href='../gestionAdmin.php'> Revenir </a>";
+        echo "<a class='mainBtn' href='../gestionAdmin.php'> Revenir </a>";
     } else {
         header("location: ../index.php");
     }

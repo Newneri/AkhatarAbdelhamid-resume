@@ -38,7 +38,7 @@
             <input type="submit" value="Sign" class="loginButton" name="submit">
         </form>
     </div>
-    <a class='btn-revenir' href='../index.php'> Revenir </a>
+    <a class='mainBtn' href='../index.php'> Revenir </a>
     <?php $_SESSION["pagename"] = "inscription-page";?>
 
 </body>

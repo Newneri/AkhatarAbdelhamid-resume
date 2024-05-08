@@ -17,7 +17,7 @@ fclose($file);
     <h2>Add a lesson</h2>
     <form action="../requestsForms/ajouterCours.php" method="POST" autocomplete="off">
     <div class='form-element'>
-            <select name='sport'>
+            <select name='sport' required>
                 <?php
                     foreach ($sports as $sport) {
                         echo "<option value='" . $sport . "'>" . $sport . "</option>";
@@ -40,6 +40,6 @@ fclose($file);
                     echo "<label value='" . $_SESSION["username"] . "'> Coach : " . $_SESSION["username"] . "</label>";
                 ?>
         </div>
-        <input type="submit" value="Add" class="loginButton" name="submit">
+        <input type="submit" value="Add" class="mainBtn" name="submit">
     </form>
 </div>
